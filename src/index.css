@@ -1,0 +1,293 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.degrade {
+  min-height: 100vh;
+  background: linear-gradient(#0c4a6e, #2d9bca, #083344);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 10px;
+  align-items: center;
+}
+
+.navbar ul {
+  list-style: none;
+}
+
+.navbar li {
+  cursor: pointer;
+}
+
+.navbar-right {
+  align-items: center;
+}
+
+.navbar select {
+  background-color: transparent;
+  border: 2px solid white;
+}
+
+.navbar option {
+  background-color: #0c4a6e;
+  color: white;
+}
+
+.navbar button {
+  align-items: center;
+  color: #0c4a6e;
+}
+
+.home {
+  padding: 0px 10px;
+  padding-bottom: 100px;
+  color: white;
+}
+
+.hero {
+  max-width: 600px;
+  margin: 80px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 56px;
+}
+
+.hero p {
+  color: rgb(234, 233, 233);
+}
+
+.hero form {
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+}
+
+.hero input {
+  font-size: 16px;
+}
+
+.hero button {
+  font-size: 16px;
+}
+
+.crypto-table {
+  max-width: 800px;
+  background: linear-gradient(#0c4a6e, #144a62, #083344);
+}
+
+.table-layout {
+  display: grid;
+  grid-template-columns: 0.5fr 2fr 1fr 1fr 1.5fr;
+  padding: 15px 20px;
+  align-items: center;
+}
+
+.table-layout .green{
+  color: green;
+  text-align: center;
+}
+
+.table-layout .red{
+  color: red;
+  text-align: center;
+}
+
+.footer {
+  color: white;
+  font-size: 13px;
+  padding: 15px 0px;
+  margin: auto;
+  max-width: 80%;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 8%;
+    align-items: center;
+  }
+
+  .navbar button {
+    gap: 8px;
+    padding: 8px 18px;
+    font-size: 14px;
+    align-items: center;
+    color: #0c4a6e;
+  }
+}
+
+@media (max-width: 860px) {
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 5%;
+    align-items: center;
+  }
+
+  .navbar ul {
+    display: none;
+  }
+
+  .navbar button img {
+    width: 12px;
+  }
+
+  .navbar button {
+    display: none;
+  }
+
+  .table-layout {
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 1fr 1fr;
+    padding: 15px 20px;
+    align-items: center;
+  }
+
+  .market-cap {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 5%;
+    align-items: center;
+  }
+
+  .navbar ul {
+    display: none;
+  }
+
+  .navbar button img {
+    width: 12px;
+  }
+
+  .navbar button {
+    display: none;
+  }
+
+  .table-layout {
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 1fr 1fr;
+    padding: 15px 20px;
+    align-items: center;
+    font-size: 13px;
+  }
+
+  .market-cap {
+    display: none;
+  }
+
+  .table-layout div img{
+    width: 25px;
+  }
+
+  .hero form input {
+    width: 100px;
+  }
+}
+
+.spinner {
+  display: grid;
+  place-self: center;
+  min-height: 80vh;
+}
+
+.spinn {
+  width: 65px;
+  height: 65px;
+  place-self: center;
+  border: 5px solid white;
+  border-top-color: #0c4a6e;
+  border-radius: 50%;
+  animation: rotate 2s infinite;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+*/
